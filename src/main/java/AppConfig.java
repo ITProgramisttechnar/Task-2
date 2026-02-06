@@ -7,13 +7,13 @@ public class AppConfig {
 private final String CAT="cat";
 private final String HELLO_WORLD="helloworld";
  
-    @Bean(name=HELLO_WORLD)
+    @Bean
     public HelloWorld getHelloWorld() {
         HelloWorld helloWorld = new HelloWorld();
         helloWorld.setMessage("Hello World!");
         return helloWorld;
     }
-    @Bean(name=CAT)
+    @Bean
     @Scope("prototype")
     public Cat getCat(){
         Cat cat = new Cat();
